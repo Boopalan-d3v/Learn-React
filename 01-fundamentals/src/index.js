@@ -1,10 +1,18 @@
-import react from "react";
-import ReactDom from "react-dom/client"
+import React from "react"
+import ReactDOM from "react-dom/client"
 
-function Greeting (){
-    return <h2> My first Component</h2>;
+function Greating(){
+  return(<div className="firstName">
+    <h3>React Tutorial</h3>
+    <ul>
+      <li>
+        <a href="#"> Hello </a>
+      </li>
+    </ul>
+  </div>)
 }
+export default <Greating/>
 
-const root  = ReactDom.createRoot(document.getElementById("root"))
+const root = ReactDOM.createRoot(document.getElementById("root"))
 
-root.render(<Greeting/>)
+root.render(<Greating/>)
