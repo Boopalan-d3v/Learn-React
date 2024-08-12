@@ -8,21 +8,20 @@ const img = 'https://images-eu.ssl-images-amazon.com/images/I/81BE7eeKzAL._AC_UL
 
 const Booklist = () => {
   return (<section className='bookList'>
-    <Book/>
-    <Book/>
-    <Book/>
+    <Book author = {author} title = {book} img = {img}/>
+    <Book author = {author} title = {book} img = {img}/>
     </section>
   )
 }
 
-const Book = () => {
+const Book = (props) => {
 
 const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
     return(
         <article className='book'>
-          <img src={img} alt={book}/>
-          <h4>{book }</h4>
-          <h4 style={styleHeading}> {author}</h4>  
+          <img src={props.img} alt={props.book}/>
+          <h4>{props.title}</h4>
+          <h4 style={styleHeading}> {props.author}</h4>
         </article>
     )
 }
