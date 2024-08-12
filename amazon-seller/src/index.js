@@ -2,14 +2,41 @@ import React from 'react'
 import ReactDOM from "react-dom/client"
 import './index.css' ;
 
-const author = 'Robert.T Kiyosaki'
-const book = 'Rich Dad and Poor Dad'
-const img = 'https://images-eu.ssl-images-amazon.com/images/I/81BE7eeKzAL._AC_UL900_SR900,600_.jpg'
+const firstBook ={author:'Robert.T Kiyosaki' ,
+  bookTitle:'Rich Dad and Poor Dad' ,
+  img:'https://images-eu.ssl-images-amazon.com/images/I/81BE7eeKzAL._AC_UL900_SR900,600_.jpg'
+}
+
+const secondBook ={
+  author :'The Housemaid', 
+  bookTitle:'Freida McFadden', 
+  img: 'https://images-na.ssl-images-amazon.com/images/I/81AHTyq2wVL._AC_UL900_SR900,600_.jpg' 
+}
+
+const thirdBook ={
+  author:'James Clear', 
+  bookTitle:'Atomic Habits', 
+  img:'https://images-na.ssl-images-amazon.com/images/I/81YkqyaFVEL._AC_UL900_SR900,600_.jpg'
+}
+
 
 const Booklist = () => {
   return (<section className='bookList'>
-    <Book author = {author} title = {book} img = {img}/>
-    <Book author = {author} title = {book} img = {img}/>
+    <Book 
+    author = {firstBook.author} 
+    title = {firstBook.bookTitle} 
+    img = {firstBook.img} />
+
+    <Book 
+    author = {secondBook.author} 
+    title = {secondBook.bookTitle} 
+    img = {secondBook.img}/>
+
+    <Book 
+    author = {thirdBook.author} 
+    title = {thirdBook.bookTitle} 
+    img = {thirdBook.img}/>
+    
     </section>
   )
 }
