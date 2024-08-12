@@ -22,11 +22,11 @@ const Book = () => {
 }
 
 
-const Image =() => <img src='https://images-eu.ssl-images-amazon.com/images/I/81+yTvHAj-L._AC_UL900_SR900,600_.jpg'/>
+const Image =() => <img src='https://images-eu.ssl-images-amazon.com/images/I/81BE7eeKzAL._AC_UL900_SR900,600_.jpg' alt='Homemaid-secret'/>
 
-const Title = () => <h4> Amma Diarylo Konni Pageelu</h4>
+const Title = () => <h4> Rich Dad and Poor Dad</h4>
 
-const Author = () => <h4> Ravi Mantri </h4> 
+const Author = () => <h4 style={{color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}}> Robert.T Kiyosaki</h4> 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
