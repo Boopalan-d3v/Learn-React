@@ -18,14 +18,14 @@ const books = [{author:'Robert.T Kiyosaki' ,
 const Booklist = () => {
   return(
   <section className='bookList'>
-    {books.map((books) => { const {author, title, img} = books
-  return(<Book author = {author} title = {title} img = {img}/>) })}
+    {books.map((books) => { const {author, bookTitle, img} = books
+  return(<Book author = {author} title = {bookTitle} img = {img}/>) })}
   </section>)}
 
 
 const Book = (props) => {
 
-const {author, title, img, children} = props
+const {author, title, img} = props
 
 const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
     return(
@@ -33,7 +33,7 @@ const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
           <img src={img} alt={title}/>
           <h4>{title}</h4>
           <h4 style={styleHeading}> {author}</h4>
-          {children}
+          
         </article>
     )
 }
