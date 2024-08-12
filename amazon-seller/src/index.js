@@ -15,19 +15,13 @@ const books = [{author:'Robert.T Kiyosaki' ,
   img:'https://images-na.ssl-images-amazon.com/images/I/81YkqyaFVEL._AC_UL900_SR900,600_.jpg'
 } ]
 
-const names = ['immanuel', 'Rajkumar', 'junior']
-
-const newNames = names.map((names) => {
-  return <h1>{names}</h1>
-})
-
 const Booklist = () => {
-  return (<section className='bookList'>
-   {newNames}
+  return(
+  <section className='bookList'>
+    {books.map((books) => { const {author, title, img} = books
+  return(<Book author = {author} title = {title} img = {img}/>) })}
+  </section>)}
 
-    </section>
-  )
-}
 
 const Book = (props) => {
 
