@@ -25,7 +25,10 @@ const Booklist = () => {
     <Book 
     author = {firstBook.author} 
     title = {firstBook.bookTitle} 
-    img = {firstBook.img} />
+    img = {firstBook.img} >
+      <p>Solo Leveling is a web novel and webtoon series by Chu-Gong that follows the journey of Sung Jin-Woo, a hunter who gains strength independently. The series explores themes of independence, personal growth, and perseverance.</p>
+      <button>Click Me</button>
+      </Book>
 
     <Book 
     author = {secondBook.author} 
@@ -36,19 +39,22 @@ const Booklist = () => {
     author = {thirdBook.author} 
     title = {thirdBook.bookTitle} 
     img = {thirdBook.img}/>
-    
+
     </section>
   )
 }
 
 const Book = (props) => {
 
+const {author, title, img, children} = props
+
 const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
     return(
         <article className='book'>
-          <img src={props.img} alt={props.book}/>
-          <h4>{props.title}</h4>
-          <h4 style={styleHeading}> {props.author}</h4>
+          <img src={img} alt={title}/>
+          <h4>{title}</h4>
+          <h4 style={styleHeading}> {author}</h4>
+          {children}
         </article>
     )
 }
