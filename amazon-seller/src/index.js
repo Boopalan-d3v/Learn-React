@@ -20,54 +20,33 @@ const books = [{
 } ]
 
 const Booklist = () => {
+  const someValue = 'easyPC'
+
+  const displayValue = () => {
+    console.log(someValue)
+  }
+
   return(
   <section className='bookList'>
-    <EventExample />
     {books.map((books) => { 
-  return(<Book {...books} key= {books.id}/> ) })}
+  return(<Book {...books} key= {books.id} displayValue = {displayValue}/> ) })}
   </section>)}
-
-const EventExample = () => {
-  const handleFormInput = (e) => {
-    console.log(e)
-    console.log(e.target.name)
-    console.log(e.target.value)
-    console.log('handle form input')
-  }
-
-  const handleButtonClick = () => {
-    alert('handle btn click')
-  }
-
-  const handleFormsubmission = (e) => {
-    e.preventDefault()
-    console.log('form submitted')
-  }
-
-  return <>
-  <form>
-    <h2>Typical form</h2>
-    <input type='text' 
-    name='example' 
-    onChange={handleFormInput} 
-    style={{margin:'1rem 0'}}></input>
-    </form>
-    <button type='submit' onClick={handleFormsubmission}> Submit</button>
-    <button onClick={handleButtonClick}>Click me</button>
-    <button onClick={() => console.log('Hello World')}>Try</button></>
-}
 
 
 
 const Book = (props) => {
 
-const {author, title, img} = props
-console.log(props)
+const {author, title, img, displayValue} = props
+
 const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
-    return(
+
+//const displayTitle = () => console.log(title) 
+
+return(
         <article className='book'>
           <img src={img} alt={title}/>
           <h4>{title}</h4>
+          <button onClick={displayValue}>Display Title</button>
           <h4 style={styleHeading}> {author}</h4>  
           
         </article>
