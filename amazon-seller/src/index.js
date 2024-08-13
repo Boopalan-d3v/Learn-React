@@ -20,38 +20,40 @@ const books = [{
 } ]
 
 const Booklist = () => {
-  const someValue = 'easyPC'
 
-  const displayValue = () => {
-    console.log(someValue)
+  const getBook = (id) => {
+    const book = books.find((data) => {return data.id === id})
+    console.log(book)
   }
 
   return(
   <section className='bookList'>
     {books.map((books) => { 
-  return(<Book {...books} key= {books.id} displayValue = {displayValue}/> ) })}
+      return(<Book {...books} key= {books.id} getBook = {getBook}/> ) })}
   </section>)}
-
-
 
 const Book = (props) => {
 
-const {author, title, img, displayValue} = props
+  const {author, title, img, getBook, id} = props
 
-const styleHeading = {color:'#617d98', fontSize:'0.75rem', marginTop:'0.5rem'}
+  const getSingleBook = () => {
+    getBook(id)
+  }
 
-//const displayTitle = () => console.log(title) 
+  const styleHeading = {color:'#617d98', 
+    fontSize:'0.75rem', 
+    marginTop:'0.5rem'}
 
-return(
-        <article className='book'>
-          <img src={img} alt={title}/>
-          <h4>{title}</h4>
-          <button onClick={displayValue}>Display Title</button>
-          <h4 style={styleHeading}> {author}</h4>  
-          
-        </article>
-    )
+  return(
+    <article className='book'>
+      <img src={img} alt={title}/>
+      <h4>{title}</h4>
+      <button onClick={getSingleBook}>Display Title</button>
+      <h4 style={styleHeading}> {author}</h4>  
+    </article>
+  )
 }
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
