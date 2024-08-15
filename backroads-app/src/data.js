@@ -1,3 +1,11 @@
+import img1 from './images/tour-1.jpeg' 
+import img2 from './images/tour-2.jpeg'
+import img3 from './images/tour-3.jpeg'
+import img4 from './images/tour-4.jpeg'
+import img5 from './images/tour-5.jpeg'
+import img6 from './images/tour-6.jpeg'
+
+
 export const PageLinks = [
     {id:1, href:'#home', text:'home'},
     {id:2, href:'#about', text:'about'},
@@ -27,7 +35,7 @@ export const Service =[
 
 export const Tour =[
     {id:1,
-    img:'./images/tour-1.jpeg',
+    img: img1,
     data:'august 26th, 2020',
     text:'Tibet Adventure',
     info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
@@ -36,7 +44,7 @@ export const Tour =[
     price:'from $2100'
     },
     {id:2,
-    img:'./images/tour-2.jpeg',
+    img:img2,
     data:'october 1th, 2020',
     text:'best of java',
     info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
@@ -45,7 +53,7 @@ export const Tour =[
     price:'from $1400'
     },
     {id:3,
-    img:'./images/tour-3.jpeg',
+    img:img3,
     data:'september 15th, 2020',
     text:'explore hong kong',
     info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
@@ -54,16 +62,7 @@ export const Tour =[
     price:'from $5000'
     },
     {id:4,
-    img:'./images/tour-4.jpeg',
-    data:'december 5th, 2019',
-    text:'kenya highlights',
-    info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
-    place:'kenya',
-    days:'20 days',
-    price:'from $3300'
-    } /*
-    {id:5,
-    img:'./images/tour-5.jpeg',
+    img:img4,
     data:'december 5th, 2019',
     text:'kenya highlights',
     info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
@@ -71,11 +70,20 @@ export const Tour =[
     days:'20 days',
     price:'from $3300'
     },
-    {id:6,
-    img:'./images/tour-6.jpeg',
-    data:'december 5th, 2019',
-    text:'kenya highlights',
+    {id:5,
+    img:img5,
+    data:'Auguest 12th, 1997',
+    text:'Wildlife Adventure',
     info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
-    place:'kenya',
-    days:'20 days',
-    price:'from $3300'}*/]
+    place:'ireland',
+    days:'15 days',
+    price:'from $1500'
+    },
+    {id:6,
+    img:img6,
+    data:'June 1st, 2001',
+    text:'Beauty of Taj Mahal',
+    info:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae tempore voluptatum maxime reprehenderit eum quod exercitationem fugit, qui corporis.',
+    place:'India',
+    days:'25 days',
+    price:'from $2000'}]
