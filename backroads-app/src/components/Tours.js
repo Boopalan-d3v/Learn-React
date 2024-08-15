@@ -13,7 +13,7 @@ export const Tours = () => {
           return(
           <article className="tour-card">
           <div className="tour-img-container">
-            <img src={img} className="tour-img" alt="" />
+            <img src={img} className="tour-img" alt={text} />
             <p className="tour-date">{date}</p>
           </div>
           <div className="tour-info">
@@ -33,7 +33,6 @@ export const Tours = () => {
           </div>
         </article>
           )
-
         })
       }
       </div>
