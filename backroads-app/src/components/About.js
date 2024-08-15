@@ -1,12 +1,12 @@
 import React from 'react'
 import AbtImage from '../images/about.jpeg'
+import { Title } from './Title'
 
 export const About = () => {
   return (
     <section className="section" id="about">
-    <div className="section-title">
-      <h2>about <span>us</span></h2>
-    </div>
+    
+    <Title title='About' subTitle='us'/>
 
     <div className="section-center about-center">
       <div className="about-img">
