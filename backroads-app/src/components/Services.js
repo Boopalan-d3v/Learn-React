@@ -4,8 +4,7 @@ import { Title } from './Title'
 export const Services = () => {
   return (
     <section className="section services" id="services">
-      <Title title='our' subTitle='services' />
-      
+    <Title title='our' subTitle='services'/>
       <div className="section-center services-center">
         <article className="service">
           <span className="service-icon"><i className="fas fa-wallet fa-fw"></i></span>
