@@ -1,7 +1,7 @@
 const Book = (props) => {
     console.log(props)
 
-    const {author, title, img, number} = props
+    const {author, title, img, number, Description} = props
   
     const styleHeading = {color:'#617d98', 
       fontSize:'0.75rem', 
@@ -13,7 +13,8 @@ const Book = (props) => {
         <img src={img} alt={title}/>
         <h4>{title}</h4>
         <button>Display Title</button>
-        <h4 style={styleHeading}> {author}</h4>  
+        <h4 style={styleHeading}> {author}</h4>
+        <p>{Description}</p>  
       </article>
     )
   }
