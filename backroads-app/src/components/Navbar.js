@@ -12,7 +12,7 @@ function Navbar() {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        {/* left this comment on purpose */}
+        
         <ul className="nav-links" id="nav-links">
           {
             PageLinks.map((link) => {
@@ -27,7 +27,7 @@ function Navbar() {
           {
             SocialLinks.map((link) => {
               return (<li key={link.id}>
-                  <a href={link.href} target="_blank" className="nav-icon">
+                  <a href={link.href} target="_blank" rel='noreferrer' className="nav-icon">
                     <i className={link.className}></i>
                   </a>
                 </li>)

@@ -17,7 +17,7 @@ export const Footer = () => {
     {
       SocialLinks.map((link) => {
         return (<li key={link.id}>
-          <a href={link.href} target="_blank" className="nav-icon">
+          <a href={link.href} target="_blank" rel="noreferrer"className="nav-icon">
             <i className={link.className}></i>
           </a>
           </li>)
@@ -26,7 +26,7 @@ export const Footer = () => {
     </ul>
     <p className="copyright">
       copyright &copy; Backroads travel tours company
-      <span id="date"></span> all rights reserved
+      <span id="date">{new Date().getFullYear()}</span> all rights reserved
     </p>
    </footer>
   </div>
