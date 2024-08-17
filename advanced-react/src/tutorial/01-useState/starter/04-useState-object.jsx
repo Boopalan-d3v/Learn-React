@@ -1,19 +1,18 @@
 import React from "react";
-import { peopleHobby } from "../../../data";
 import { useState } from "react";
 
 const UseStateObject = () => {
-
-  const [name, setName] = useState('Ashi')
-  const [age, setAge] = useState(27)
-  const [hobby, setHobby] = useState('Dancing')
+  const [person, setPerson] = useState({
+    name:'Ashi',
+    age:23,
+    hobby:'Gardening'
+  })
+  
     
   const showDetails = () =>{
-    setName('Lallu')
-    setAge(23)
-    setHobby('Gardening')
+    setPerson({...person , hobby:'Dancing'})
   }
-
+  const { name, age, hobby} = person
   return( 
     <>
       <h2>useState object example</h2>
@@ -24,5 +23,4 @@ const UseStateObject = () => {
     </>);
 
 };
-
 export default UseStateObject;
