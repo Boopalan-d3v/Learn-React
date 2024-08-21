@@ -1,4 +1,4 @@
-import Starter from '../src/tutorial/03-conditional-rendering/starter/01-multiple-returns-basics'
+import Starter from '../src/tutorial/03-conditional-rendering/starter/02-multiple-returns-fetch-data'
 
 function App() {
   return (
