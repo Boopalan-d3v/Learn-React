@@ -13,13 +13,19 @@ const CleanupFunction = () => {
 
 const SecondComponent = () => {
   useEffect(() => {
-    const intId = setInterval(() => {
+    /* const intId = setInterval(() => {
       //console.log('Wooofh !');
     } , 1000)
     return() => {
       clearInterval(intId)
       console.log('cleanup')
-    }   
+    } */
+   
+    const someFunction = () => {
+
+    }
+    window.addEventListener('scroll', someFunction)
+    return () => window.removeEventListener('scroll', someFunction)
   }, [])
 
   return <><h3>hello, Techie</h3></>
