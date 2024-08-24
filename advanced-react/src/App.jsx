@@ -1,12 +1,9 @@
-import Example from "./tutorial/04-project-structure/starter/Example";
-
-
+import List from "./tutorial/05-leverage-javascript/starter";
 function App() {
   return (
     <div className='container'>
-      <Example/>
+      <List />
     </div>
   );
 }
-
 export default App;
