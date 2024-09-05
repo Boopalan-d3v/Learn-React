@@ -1,14 +1,23 @@
 import React, { useState , useReducer} from 'react';
 import { data } from '../../../data';
 const ReducerBasics = () => {
-  const reducer = () => {
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "ClearAll":
+        
+        break;
+    
+      default:
+        break;
+    }
 
   }
 
-  useReducer(reducer,)
+   const [state, dispatch] = useReducer(reducer,data)
 
 
-  const [people, setPeople] = useState(data);
+  //const [people, setPeople] = useState(data);
 
   const removeItem = (id) => {
     let newPeople = people.filter((person) => person.id !== id);
@@ -16,11 +25,11 @@ const ReducerBasics = () => {
   };
 
   const clearAll = () => {
-    setPeople([])
+    //setPeople([])
   }
 
   const restoreItem = () => {
-    setPeople (data)
+    //setPeople (data)
   }
   return (
     <div>
