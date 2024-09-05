@@ -13,7 +13,7 @@ const ReducerBasics = () => {
       case Actions.restore:
         return{...state, people:data}
       case Actions.removeItem:
-        let newData = people.filter((person) => person.id !== state.id)
+        let newData = state.people.filter((person) => person.id !== action.payload.id)
         return{...state, people:newData}
       case Actions.clearALL:
         return{...state, people:[]}
@@ -27,7 +27,7 @@ const ReducerBasics = () => {
   //const [people, setPeople] = useState(data);
 
   const removeItem = (id) => {
-    dispatch({type: Actions.removeItem, id})
+    dispatch({type: Actions.removeItem, payload: {id}})
     //let newPeople = people.filter((person) => person.id !== id);
     //setPeople(newPeople);
   };
