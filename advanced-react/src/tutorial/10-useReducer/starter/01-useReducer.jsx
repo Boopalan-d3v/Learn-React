@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState , useReducer} from 'react';
 import { data } from '../../../data';
 const ReducerBasics = () => {
+  const reducer = () => {
+
+  }
+
+  useReducer(reducer,)
+
+
   const [people, setPeople] = useState(data);
 
   const removeItem = (id) => {
     let newPeople = people.filter((person) => person.id !== id);
     setPeople(newPeople);
   };
+
+  const clearAll = () => {
+    setPeople([])
+  }
+
+  const restoreItem = () => {
+    setPeople (data)
+  }
   return (
     <div>
       {people.map((person) => {
@@ -18,9 +33,9 @@ const ReducerBasics = () => {
           </div>
         );
       })}
-      {people.length ? (<><button className='btn' style={{ marginTop: '2rem' }} onClick={() => setPeople([])}>
+      {people.length ? (<><button className='btn' style={{ marginTop: '2rem' }} onClick={clearAll}>
         clear items
-      </button></>) : (<><button className='btn' style={{ marginTop: '2rem' }} onClick={() => setPeople(data)}>
+      </button></>) : (<><button className='btn' style={{ marginTop: '2rem' }} onClick={restoreItem}>
         Restore items
       </button></>)}
       
