@@ -11,7 +11,7 @@ export const Component = ({addPerson}) => {
           return;
         }
         addPerson(name);
-        setName('');
+        //setName('');
       };
 
   return (
