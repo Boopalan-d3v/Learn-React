@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { data } from '../../../../data';
 import List from './List';
 const LowerState = () => {
   const [people, setPeople] = useState(data);
   const [count, setCount] = useState(0);
+
+  const removeItem = useCallback((id) => {
+    let newPeople = people.filter((person) => person.id != id)
+    setPeople(newPeople)
+  },[people]) 
 
   return (
     <section>
@@ -14,7 +19,7 @@ const LowerState = () => {
       >
         count {count}
       </button>
-      <List people={people} />
+      <List people={people} removeItem={removeItem}/>
     </section>
   );
 };
